@@ -1,0 +1,49 @@
+﻿@* Take and put this in the renderedbody *@
+
+@{
+    Layout = "~/Shared/_Layout.cshtml";
+}
+
+@{ 
+    DateTime now = DateTime.Now;
+    var thisDate = now.ToLongDateString();
+}
+
+
+<div class="bodyContentDisplay">
+    <table border="1">
+        <tr>
+            <td>Date</td>
+            <td>Activity</td>
+            <td>Distance</td>
+            <td>Time</td>
+            <td>Comment</td>
+        </tr>
+        <tr>
+            <td>@thisDate</td>
+            <td>Bike</td>
+            <td>60 miles</td>
+            <td>3 hours</td>
+            <td>Strong</td>
+        </tr>
+
+    </table>
+</div>
+
+
+@section sidebar{
+    <div class="onTheSide">
+        <ul>
+            <li><a href="~/default.cshtml">Home</a></li>
+
+            <li>
+                <a href="~/log.cshtml">Log Miles</a>
+            </li>
+            <li>
+                <a href="~/view.cshtml">View Miles</a>
+            </li>
+        </ul>
+    </div>
+}
+
+

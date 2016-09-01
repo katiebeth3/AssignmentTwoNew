@@ -1,0 +1,52 @@
+﻿@* Take and put this in the renderedbody *@
+
+@{
+    Layout = "~/Shared/_Layout.cshtml";
+}
+
+
+@section sidebar{
+    <div class="onTheSide">
+        <ul>
+            <li><a href="~/default.cshtml">Home</a></li>
+
+            <li>
+                <a href="~/log.cshtml">Log Miles</a>
+            </li>
+            <li>
+                <a href="~/view.cshtml">View Miles</a>
+            </li>
+        </ul>
+    </div>
+}
+
+<div class="bodyContentLog">
+    <h1>Log Miles</h1>
+    <div class="directions">
+        <h2>Directions:</h2>
+        <ol>
+            <li>Enter the Activity (run/bike/swim).</li>
+            <li>Enter the Distance (miles).</li>
+            <li>Enter the Time (start to finish).</li>
+            <li>Enter a comment or category of ride (see table below).</li>
+        </ol>
+    </div>
+
+
+
+
+    <dl>
+        <dt>Strong Ride</dt>
+        <dd>20-24 mph</dd>
+        <dt>Medium Ride</dt>
+        <dd>16-20 mph</dd>
+        <dt>Easy Ride</dt>
+        <dd>less than 16 mph</dd>
+        <dt>Strong Run</dt>
+        <dd>7-9 min/mile</dd>
+        <dt>Medium Run</dt>
+        <dd>9-10 min/mile</dd>
+        <dt>Easy Run</dt>
+        <dd>greater than 11 min/mile</dd>
+    </dl>
+</div>

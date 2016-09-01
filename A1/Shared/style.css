@@ -1,0 +1,143 @@
+﻿/* asterisk applies to all margins*/
+*{margin:0px; padding:0px;}
+
+.wrapper{
+    margin:0 auto 0 auto;
+    width:85%;
+}
+
+.content{
+    background-color:#f2f2f2; 
+    color:#000000; 
+    float:right; 
+    width:75%;
+}
+
+.content, aside{
+    min-height: 500px;
+}
+
+footer{
+    background-color:#913c3a; 
+    /*height:100px;*/ 
+    clear:both;
+}
+
+header{
+    background-color:#cccccc;
+    clear:both;
+    text-align:center;
+    padding-top:3em;
+}
+
+aside{
+    width:25%; 
+    background-color:#bfbfbf; 
+    float:left;
+}
+
+footer{
+    text-align:center; 
+    color:white;
+}
+
+.banner {
+    height:300px;
+    width:100%;     
+    background: #cccccc url('../Images/WindingRoad.jpg') no-repeat center center;
+}
+
+.myHeader h1{
+    font-weight:bolder;
+    color:black;
+    font-size:3em;
+    padding-bottom:.5em;
+}
+
+.onTheSide{
+    padding:20px;
+    margin-left:20px;
+}
+
+.onTheSide ul{
+    list-style:square;
+    font-size:1.5em;
+    font-weight:bolder;
+}
+
+.onTheSide li{
+    padding-bottom:20px;
+}
+
+.onTheSide a, .onTheSide a:visited{
+    color:darkblue;
+    text-decoration:none;
+}
+
+.onTheSide a:hover{
+    color:darkGreen;
+}
+
+.pad{
+    padding:10px 0;
+}
+
+.bodyContent{
+    text-align:center;
+    font-size:2em;
+    font-weight:bolder;
+    width:90%;
+    margin: 2em auto;
+}
+
+.bodyContentDisplay{
+    width:90%;
+    margin: 2em auto;
+}
+
+.bodyContentDisplay td{
+    padding:5px 10px;
+    font-size:1.5em;
+}
+
+.bodyContent p{
+    margin-bottom:20px;
+}
+
+.float{
+    float:right;
+}
+
+.bodyContentLog{
+    width:90%;
+    margin:20px auto;
+}
+
+.bodyContentLog h1{
+    text-align:center;
+    font-size:3em;
+}
+
+.directions{
+    margin:30px 0px;
+}
+
+ dl {
+    border: 3px double #ccc;
+    padding: 0.5em;
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    color: green;
+  }
+  dt:after {
+    content: ":";
+  }
+  dd {
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
+  }

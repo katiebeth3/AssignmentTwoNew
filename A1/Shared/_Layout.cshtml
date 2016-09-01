@@ -1,0 +1,38 @@
+﻿@*Underscore means partial view, cannot be rendered alone because it is designated a helper page,
+    can only have ONE RenderBody(), but you can nest it*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="@Href("~/Shared/style.css")" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        @* RenderPage is NOT optional *@
+        <header>
+            @RenderPage("~/Shared/_Header.cshtml")
+    </header>
+
+    <aside>
+        @* RenderSection IS optional! false makes it optional.  Calling page needs to have a section called sidebar.*@
+        @RenderSection("sidebar", false)
+    </aside>
+
+    <div class="content">
+        @* page that called me *@
+        @RenderBody()
+    </div>
+
+    @* page pulled in??? *@
+    <footer>@RenderPage("~/Shared/_Footer.cshtml")</footer>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
