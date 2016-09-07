@@ -9,22 +9,24 @@
     var thisDate = now.ToLongDateString();
 }
 
+@{ var activity = Request["activity"]; var time = Request["time"]; var distance = Request["distance"]; var difficulty = Request["difficulty"];} 
+
 
 <div class="bodyContentDisplay">
-    <table border="1">
+    <table border="1" margin="1">
         <tr>
             <td>Date</td>
             <td>Activity</td>
-            <td>Distance</td>
-            <td>Time</td>
-            <td>Comment</td>
+            <td>Distance<br/>(miles)</td>
+            <td>Time<br/>(minutes)</td>
+            <td>Difficulty</td>
         </tr>
         <tr>
             <td>@thisDate</td>
-            <td>Bike</td>
-            <td>60 miles</td>
-            <td>3 hours</td>
-            <td>Strong</td>
+            <td>@activity</td>
+            <td>@distance</td>
+            <td>@time</td>
+            <td>@difficulty</td>
         </tr>
 
     </table>

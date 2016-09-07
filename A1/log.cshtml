@@ -4,8 +4,25 @@
     Layout = "~/Shared/_Layout.cshtml";
 }
 
+@*@{
+            Validation.Add("time", Validator.Required("Time is required"), Validator.StringLength(4, 1, "Time must be greater than 1 characters but less than 4"));
+            Validation.Add("distance", Validator.Required("Distance is required"), Validator.StringLength(4, 1, "Distance must be greater than 1 characters but less than 4"));
 
-@section sidebar{
+            if (IsPost)
+            {
+                var time = Request["time"];
+                var distance = Request["distance"];
+               
+                
+                if(Validation.IsValid()==false){
+                    Validation.AddFormError("Sorry there were errors in your submission");
+                }
+            }
+
+        }*@
+
+
+        @section sidebar{
     <div class="onTheSide">
         <ul>
             <li><a href="~/default.cshtml">Home</a></li>
@@ -22,31 +39,70 @@
 
 <div class="bodyContentLog">
     <h1>Log Miles</h1>
+
+    @*Give Directions*@
     <div class="directions">
         <h2>Directions:</h2>
         <ol>
             <li>Enter the Activity (run/bike/swim).</li>
             <li>Enter the Distance (miles).</li>
             <li>Enter the Time (start to finish).</li>
-            <li>Enter a comment or category of ride (see table below).</li>
+            <li>Enter Difficulty of Activity (see table below).</li>
         </ol>
     </div>
 
 
+@*Define Dropdown Choices*@
+    <div class="typeChoices">
+        <dl>
+            <dt>Strong Ride</dt>
+            <dd>20-24 mph</dd>
+            <dt>Medium Ride</dt>
+            <dd>16-20 mph</dd>
+            <dt>Easy Ride</dt>
+            <dd>less than 16 mph</dd>
+            <dt>Strong Run</dt>
+            <dd>7-9 min/mile</dd>
+            <dt>Medium Run</dt>
+            <dd>9-10 min/mile</dd>
+            <dt>Easy Run</dt>
+            <dd>greater than 11 min/mile</dd>
+        </dl>
+    </div>
+
+    @*Form*@
+    
+        <form method="get" action="/view.cshtml" >
+            
+                <fieldset>
+                    <div >
+                        <p >Select the activity:</p>
+                        Run:<input type="checkbox" value="Run" name="activity" />
+                        Bike:<input type="checkbox" value="Bike" name="activity" />
+                        Swim:<input type="checkbox" value="Swim" name="activity" />
 
 
-    <dl>
-        <dt>Strong Ride</dt>
-        <dd>20-24 mph</dd>
-        <dt>Medium Ride</dt>
-        <dd>16-20 mph</dd>
-        <dt>Easy Ride</dt>
-        <dd>less than 16 mph</dd>
-        <dt>Strong Run</dt>
-        <dd>7-9 min/mile</dd>
-        <dt>Medium Run</dt>
-        <dd>9-10 min/mile</dd>
-        <dt>Easy Run</dt>
-        <dd>greater than 11 min/mile</dd>
-    </dl>
+                        <p>Enter the distance of the activity in miles:</p>
+                        <input type="text" placeholder="Distance" name="distance" />
+                        @Html.ValidationMessage("distance")
+
+                        <p>Enter the time of the activity in minutes:</p>
+                        <input type="text" placeholder="Time" name="time" />
+                        @Html.ValidationMessage("time")
+
+                        <p>Select the difficulty:</p>
+                        Strong:<input type="radio" value="Strong" name="difficulty" />
+                        Medium:<input type="radio" value="Medium" name="difficulty" />
+                        Easy:<input type="radio" value="Easy" name="difficulty" />
+                        <br />
+                        <input type="submit" />
+                    </div>
+</fieldset>
+            
+</form>
+    
+    
+
+
+
 </div>
