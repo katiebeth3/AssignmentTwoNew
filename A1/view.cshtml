@@ -9,7 +9,44 @@
     var thisDate = now.ToLongDateString();
 }
 
-@{ var activity = Request["activity"]; var time = Request["time"]; var distance = Request["distance"]; var difficulty = Request["difficulty"];} 
+@{ var activity = Request["activity"]; var time = Request["time"]; var distance = Request["distance"]; var difficulty = Request["difficulty"];
+    if (activity == null) {
+        activity = "unknown";
+    }
+    if ((time==null) || (time == "") || (time.Length < 1) ||( time.Length > 4))
+    {
+        time = "unknown";
+    }
+    if ((distance == null) | (distance =="") || (distance.Length < 1) || (distance.Length > 4))
+    {
+        distance = "unknown";
+    }
+    if (difficulty == null)
+    {
+        difficulty = "unknown";
+    }
+
+ }
+
+@{ var msg = "";
+    Validation.Add("FirstName", Validator.Required("First Name is required"), Validator.StringLength(10, 3, "Name must be greater than 3 characters but less than 10"));
+    Validation.Add("LastName", Validator.Required("Last Name is required"), Validator.StringLength(10, 3, "Name must be greater than 3 characters but less than 10"));
+
+    if (IsPost)
+    {
+        var FirstName = Request["FirstName"];
+        var LastName = Request["LastName"];
+        if (Validation.IsValid()) { msg = "Welcome " + FirstName + " " + LastName; }
+        else
+        {
+            Validation.AddFormError("Sorry there were errors in your submission");
+        }
+    } }
+
+
+
+
+
 
 
 <div class="bodyContentDisplay">

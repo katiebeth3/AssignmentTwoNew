@@ -4,22 +4,6 @@
     Layout = "~/Shared/_Layout.cshtml";
 }
 
-@*@{
-            Validation.Add("time", Validator.Required("Time is required"), Validator.StringLength(4, 1, "Time must be greater than 1 characters but less than 4"));
-            Validation.Add("distance", Validator.Required("Distance is required"), Validator.StringLength(4, 1, "Distance must be greater than 1 characters but less than 4"));
-
-            if (IsPost)
-            {
-                var time = Request["time"];
-                var distance = Request["distance"];
-               
-                
-                if(Validation.IsValid()==false){
-                    Validation.AddFormError("Sorry there were errors in your submission");
-                }
-            }
-
-        }*@
 
 
         @section sidebar{
