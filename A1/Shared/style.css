@@ -11,13 +11,8 @@
     color:#000000; 
 }
 
-/*.content, aside{
-    min-height: 500px;
-}*/
-
 footer{
     background-color:#913c3a; 
-    /*height:100px;*/ 
     clear:both;
 }
 
@@ -28,19 +23,13 @@ header{
     padding-top:3em;
 }
 
-/*aside{
-    width:25%; 
-    background-color:#bfbfbf; 
-    float:left;
-}*/
-
-/*.topNav{
-    background-color:#913c3a;
-}*/
-
 #myNavbar {
     float: right;
     margin-right: 30px;
+}
+
+.navbar{
+    margin-bottom:10px !important;
 }
 
 footer{
@@ -63,30 +52,6 @@ footer{
     padding-bottom:.5em;
 }
 
-.onTheSide{
-    padding:20px;
-    margin-left:20px;
-}
-
-.onTheSide ul{
-    list-style:square;
-    font-size:1.5em;
-    font-weight:bolder;
-}
-
-.onTheSide li{
-    padding-bottom:20px;
-}
-
-.onTheSide a, .onTheSide a:visited{
-    color:darkblue;
-    text-decoration:none;
-}
-
-.onTheSide a:hover{
-    color:darkGreen;
-}
-
 .pad{
     padding:10px 0;
 }
@@ -96,13 +61,13 @@ footer{
     font-size:2em;
     font-weight:bolder;
     width:90%;
-    /*margin:0px auto;*/
     padding:30px 15px;
 }
 
+
 .bodyContentDisplay{
-    width:90%;
-    margin: 2em auto;
+    padding:30px;
+    margin-bottom:10px; 
 }
 
 .bodyContentDisplay td{
@@ -121,6 +86,7 @@ footer{
 .bodyContentLog{
     width:90%;
     margin:20px auto;
+    padding:30px 20px;
 }
 
 .bodyContentLog h1{
@@ -128,41 +94,12 @@ footer{
     font-size:3em;
 }
 
-.directions{
-    /*margin:30px 0px;*/
-}
-
- dl {
-    border: 3px double #ccc;
-    padding: 0.5em;
-  }
-  dt {
-    float: left;
-    clear: left;
-    width: 100px;
-    text-align: right;
-    font-weight: bold;
-    color: green;
-  }
-  dt:after {
-    content: ":";
-  }
-  dd {
-    margin: 0 0 0 110px;
-    padding: 0 0 0.5em 0;
-  }
-
   .thisForm{
       margin-bottom:30px;
   }
-
-  /*.activityForm p, .activityForm{
-      margin-top:30px !important;
-      padding-top:30px;
-      color:red;
-  }*/
 
   .btn-primary{
       background-color:#336600 !important;
       border-color: #1a3300 !important;
   }
+

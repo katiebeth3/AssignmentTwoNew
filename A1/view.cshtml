@@ -28,46 +28,26 @@
 
  }
 
-
-
-
-
-
-
-<div class="bodyContentDisplay">
-    <table border="1" margin="1">
-        <tr>
-            <td>Date</td>
-            <td>Activity</td>
-            <td>Distance<br/>(miles)</td>
-            <td>Time<br/>(minutes)</td>
-            <td>Difficulty</td>
-        </tr>
-        <tr>
-            <td>@thisDate</td>
-            <td>@activity</td>
-            <td>@distance</td>
-            <td>@time</td>
-            <td>@difficulty</td>
-        </tr>
-
+<div class="col-sm-8 col-sm-offset-2 bodyContentDisplay table-responsive">
+    <table border="1" margin="1" class="table table-hover">
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Activity</td>
+                <td>Distance<br />(miles)</td>
+                <td>Time<br />(minutes)</td>
+                <td>Difficulty</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@thisDate</td>
+                <td>@activity</td>
+                <td>@distance</td>
+                <td>@time</td>
+                <td>@difficulty</td>
+            </tr>
+        </tbody>
     </table>
 </div>
-
-
-@section sidebar{
-    <div class="onTheSide">
-        <ul>
-            <li><a href="~/default.cshtml">Home</a></li>
-
-            <li>
-                <a href="~/log.cshtml">Log Miles</a>
-            </li>
-            <li>
-                <a href="~/view.cshtml">View Miles</a>
-            </li>
-        </ul>
-    </div>
-}
-
-
+    
