@@ -6,7 +6,7 @@
 
 
 
-        @section sidebar{
+        @*@section sidebar{
     <div class="onTheSide">
         <ul>
             <li><a href="~/default.cshtml">Home</a></li>
@@ -19,74 +19,87 @@
             </li>
         </ul>
     </div>
-}
+}*@
 
 <div class="bodyContentLog">
     <h1>Log Miles</h1>
 
-    @*Give Directions*@
-    <div class="directions">
-        <h2>Directions:</h2>
-        <ol>
-            <li>Enter the Activity (run/bike/swim).</li>
-            <li>Enter the Distance (miles).</li>
-            <li>Enter the Time (start to finish).</li>
-            <li>Enter Difficulty of Activity (see table below).</li>
-        </ol>
-    </div>
+    <div class="row row-centered">
+      
+               
+        @*Define Dropdown Choices*@
+        <div class="col-sm-4 col-centered typeChoices">
+            <h2>Definitions:</h2>
+            <dl>
+                <dt>Strong Ride</dt>
+                <dd>20-24 mph</dd>
+                <dt>Medium Ride</dt>
+                <dd>16-20 mph</dd>
+                <dt>Easy Ride</dt>
+                <dd>less than 16 mph</dd>
+                <dt>Strong Run</dt>
+                <dd>7-9 min/mile</dd>
+                <dt>Medium Run</dt>
+                <dd>9-10 min/mile</dd>
+                <dt>Easy Run</dt>
+                <dd>greater than 11 min/mile</dd>
+            </dl>
+        </div>
+
+        @*Give Directions*@
+        <div class="col-sm-4 col-sm-centered directions">
+            <h2>Directions:</h2>
+            <ol>
+                <li>Enter the Activity (run/bike/swim).</li>
+                <li>Enter the Distance (miles).</li>
+                <li>Enter the Time (start to finish).</li>
+                <li>Enter Difficulty of Activity (see table below).</li>
+            </ol>
+        </div>
 
 
-@*Define Dropdown Choices*@
-    <div class="typeChoices">
-        <dl>
-            <dt>Strong Ride</dt>
-            <dd>20-24 mph</dd>
-            <dt>Medium Ride</dt>
-            <dd>16-20 mph</dd>
-            <dt>Easy Ride</dt>
-            <dd>less than 16 mph</dd>
-            <dt>Strong Run</dt>
-            <dd>7-9 min/mile</dd>
-            <dt>Medium Run</dt>
-            <dd>9-10 min/mile</dd>
-            <dt>Easy Run</dt>
-            <dd>greater than 11 min/mile</dd>
-        </dl>
-    </div>
+        <div class="col-sm-4 col-centered activityForm">
+            <h2>Activity:</h2>
+            @*Form*@
 
-    @*Form*@
-    
-        <form method="get" action="/view.cshtml" >
-            
+            <form method="get" action="/view.cshtml">
+
                 <fieldset>
-                    <div >
-                        <p >Select the activity:</p>
-                        Run:<input type="checkbox" value="Run" name="activity" />
-                        Bike:<input type="checkbox" value="Bike" name="activity" />
-                        Swim:<input type="checkbox" value="Swim" name="activity" />
+                    <div>
+                        <div class="thisForm">
+                            <p>Select the activity:</p>
+                            Run:<input type="checkbox" value="Run" name="activity" />
+                            Bike:<input type="checkbox" value="Bike" name="activity" />
+                            Swim:<input type="checkbox" value="Swim" name="activity" />
+                        </div>
 
+                        <div class="thisForm">
+                            <p>Enter the distance of the activity in miles:</p>
+                            <input type="text" placeholder="Distance" name="distance" />
+                            @Html.ValidationMessage("distance")
+                                                        </div>
 
-                        <p>Enter the distance of the activity in miles:</p>
-                        <input type="text" placeholder="Distance" name="distance" />
-                        @Html.ValidationMessage("distance")
+                        <div class="thisForm">
+                            <p>Enter the time of the activity in minutes:</p>
+                            <input type="text" placeholder="Time" name="time" />
+                            @Html.ValidationMessage("time")
+                            </div>
 
-                        <p>Enter the time of the activity in minutes:</p>
-                        <input type="text" placeholder="Time" name="time" />
-                        @Html.ValidationMessage("time")
+                        <div class="thisForm">
+                            <p>Select the difficulty:</p>
+                            Strong:<input type="radio" value="Strong" name="difficulty" />
+                            Medium:<input type="radio" value="Medium" name="difficulty" />
+                            Easy:<input type="radio" value="Easy" name="difficulty" />
+                            </div>                           
+                         
+                            <input type="submit" value="Submit" class="btn btn-primary"/>
+                        </div>
+                </fieldset>
 
-                        <p>Select the difficulty:</p>
-                        Strong:<input type="radio" value="Strong" name="difficulty" />
-                        Medium:<input type="radio" value="Medium" name="difficulty" />
-                        Easy:<input type="radio" value="Easy" name="difficulty" />
-                        <br />
-                        <input type="submit" />
-                    </div>
-</fieldset>
-            
-</form>
-    
-    
+            </form>
+        </div>
 
+    </div>
 
 
 </div>

@@ -9,13 +9,11 @@
 .content{
     background-color:#f2f2f2; 
     color:#000000; 
-    float:right; 
-    width:75%;
 }
 
-.content, aside{
+/*.content, aside{
     min-height: 500px;
-}
+}*/
 
 footer{
     background-color:#913c3a; 
@@ -30,10 +28,19 @@ header{
     padding-top:3em;
 }
 
-aside{
+/*aside{
     width:25%; 
     background-color:#bfbfbf; 
     float:left;
+}*/
+
+/*.topNav{
+    background-color:#913c3a;
+}*/
+
+#myNavbar {
+    float: right;
+    margin-right: 30px;
 }
 
 footer{
@@ -42,6 +49,8 @@ footer{
 }
 
 .banner {
+    background-position:center center;
+    background-size:cover;
     height:300px;
     width:100%;     
     background: #cccccc url('../Images/WindingRoad.jpg') no-repeat center center;
@@ -87,7 +96,8 @@ footer{
     font-size:2em;
     font-weight:bolder;
     width:90%;
-    margin: 2em auto;
+    /*margin:0px auto;*/
+    padding:30px 15px;
 }
 
 .bodyContentDisplay{
@@ -119,7 +129,7 @@ footer{
 }
 
 .directions{
-    margin:30px 0px;
+    /*margin:30px 0px;*/
 }
 
  dl {
@@ -142,8 +152,17 @@ footer{
     padding: 0 0 0.5em 0;
   }
 
-  .activityForm p, .activityForm{
+  .thisForm{
+      margin-bottom:30px;
+  }
+
+  /*.activityForm p, .activityForm{
       margin-top:30px !important;
       padding-top:30px;
       color:red;
+  }*/
+
+  .btn-primary{
+      background-color:#336600 !important;
+      border-color: #1a3300 !important;
   }
